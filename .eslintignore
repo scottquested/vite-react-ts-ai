@@ -1,0 +1,8 @@
+dist
+coverage
+.github
+node_modules
+.eslintrc.js
+webpack.config.js
+config
+*.stories.*
