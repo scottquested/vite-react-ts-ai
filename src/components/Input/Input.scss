@@ -1,0 +1,13 @@
+.input {
+  padding: 0.5em 1em;
+  font-size: 18px;
+  margin-bottom: 1em;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &__label {
+    text-align: left;
+  }
+}

@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__container {
+    max-width: 512px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}

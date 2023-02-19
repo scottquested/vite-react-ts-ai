@@ -1,0 +1,25 @@
+.heading {
+  margin: 0;
+  font-weight: 400;
+
+  &:is(h1) {
+    font-size: 3.5rem;
+  }
+
+  &--highlight {
+    font-weight: 700;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: rgb(119, 56, 235);
+    background: linear-gradient(
+      90deg,
+      rgba(119, 56, 235, 1) 0%,
+      rgba(98, 48, 190, 1) 100%
+    );
+  }
+}

@@ -1,4 +1,4 @@
-import client from './api';
+import client from './client';
 
 type Params = {
   prompt: string;
@@ -6,10 +6,10 @@ type Params = {
   size: '256x256' | '512x512' | '1024x1024';
 };
 
-const apiURL = import.meta.env.VITE_OPEN_AI_URL;
+const apiURL = 'https://api.openai.com/v1/images/generations';
 
-const getImage = async (params: Params) => {
-  return await client.post(apiURL, params);
+const getImage = async (params: Params, apiKey: string) => {
+  return await client(apiKey).post(apiURL, params);
 };
 
 export default getImage;

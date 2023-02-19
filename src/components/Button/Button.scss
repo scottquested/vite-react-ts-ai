@@ -1,0 +1,39 @@
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: rgb(119, 56, 235);
+  background: linear-gradient(
+    90deg,
+    rgba(119, 56, 235, 1) 0%,
+    rgba(98, 48, 190, 1) 100%
+  );
+  cursor: pointer;
+
+  &:hover {
+    background: lighten(rgb(119, 56, 235), 5%);
+    background: linear-gradient(
+      90deg,
+      lighten(rgba(119, 56, 235, 1), 5%) 0%,
+      lighten(rgba(98, 48, 190, 1), 5%) 100%
+    );
+  }
+
+  &:focus,
+  &::focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .button {
+    background-color: #f9f9f9;
+  }
+}
