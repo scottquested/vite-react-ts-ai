@@ -7,7 +7,8 @@ const ImageWrap = ({
   placeholder,
   disabled,
   type = 'text',
-  label
+  label,
+  defaultValue
 }: InputProps) => {
   return (
     <>
@@ -18,6 +19,7 @@ const ImageWrap = ({
         className="input"
         placeholder={placeholder}
         disabled={disabled}
+        defaultValue={defaultValue}
       />
     </>
   );

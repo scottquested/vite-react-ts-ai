@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { getImage } from './api';
 import ImageWrap from './components/ImageWrap';
 import Input from './components/Input';
@@ -11,7 +11,7 @@ import Heading from './components/Heading';
 
 const App = () => {
   const [aiImage, setAiImage] = useState('');
-  const [apiKey, setapiKey] = useState('');
+  const [apiKey, setApiKey] = useState('');
   const [textToSearch, setTextToSearch] = useState('');
   const [loading, setLoading] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -37,12 +37,20 @@ const App = () => {
         },
         apiKey
       );
+
       setAiImage(data.data[0].url);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       alert(e.response?.data?.error?.message || 'Something went wrong');
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (import.meta.env.DEV) {
+      setApiKey(import.meta.env.VITE_OPEN_AI_KEY);
+    }
+  }, []);
 
   const drawImage = () => {
     return aiImage.length ? (
@@ -76,12 +84,14 @@ const App = () => {
         </ImageWrap>
         <form className="app__form" onSubmit={onGenerateImage}>
           <Input
-            onChange={e => setapiKey(e.target.value)}
+            onChange={e => setApiKey(e.target.value)}
+            defaultValue={apiKey}
             placeholder="Please enter your API key first"
             type={'password'}
             label="API key"
+            disabled={import.meta.env.DEV}
           />
-          {!!apiKey.length && (
+          {!!apiKey?.length && (
             <>
               <Input
                 onChange={e => setTextToSearch(e.target.value)}
@@ -89,7 +99,10 @@ const App = () => {
                 disabled={!apiKey.length}
                 label="Image search"
               />
-              <Button disabled={!apiKey.length} type="submit">
+              <Button
+                disabled={!apiKey.length || !textToSearch.length}
+                type="submit"
+              >
                 Generate Image
               </Button>
             </>
