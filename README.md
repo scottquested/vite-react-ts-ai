@@ -39,10 +39,10 @@ Make sure to replace your-api-key-goes-here with your actual API key.
 
 ## Technologies Used
 
-[Vite](https://vitejs.dev/) - A build tool that offers fast development server and optimized production build.
-[React](https://reactjs.org/) - A popular JavaScript library for building user interfaces.
-[Typescript](https://www.typescriptlang.org/) - A superset of JavaScript that adds type annotations and other features to the language.
-[OpenAI API](https://openai.com/) - A powerful natural language processing API that can perform a wide range of text-based tasks.
+- [Vite](https://vitejs.dev/) - A build tool that offers fast development server and optimized production build.
+- [React](https://reactjs.org/) - A popular JavaScript library for building user interfaces.
+- [Typescript](https://www.typescriptlang.org/) - A superset of JavaScript that adds type annotations and other features to the language.
+- [OpenAI API](https://openai.com/) - A powerful natural language processing API that can perform a wide range of text-based tasks.
 
 ## License
 
