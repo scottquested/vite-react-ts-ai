@@ -75,7 +75,9 @@ const App = () => {
       </Heading>
       <p>
         Enter your API key to get started. You can find more information on the{' '}
-        <a href="https://platform.openai.com">OpenAI website</a>
+        <a href="https://platform.openai.com">
+          OpenAI website - go here if you like
+        </a>
       </p>
       <div className="app__container">
         <ImageWrap>
