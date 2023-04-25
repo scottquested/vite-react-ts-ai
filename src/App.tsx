@@ -75,9 +75,7 @@ const App = () => {
       </Heading>
       <p>
         Enter your API key to get started. You can find more information on the{' '}
-        <a href="https://platform.openai.com">
-          OpenAI website - go here if you like, or don't...up to you
-        </a>
+        <a href="https://platform.openai.com">OpenAI website</a>
       </p>
       <div className="app__container">
         <ImageWrap>
@@ -88,7 +86,7 @@ const App = () => {
           <Input
             onChange={e => setApiKey(e.target.value)}
             defaultValue={apiKey}
-            placeholder="Please enter your API key first"
+            placeholder="Please enter your API key"
             type={'password'}
             label="API key"
             disabled={import.meta.env.DEV}
