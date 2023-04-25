@@ -95,7 +95,7 @@ const App = () => {
             <>
               <Input
                 onChange={e => setTextToSearch(e.target.value)}
-                placeholder="What kind of image do you want?"
+                placeholder="Type what image you want to generate"
                 disabled={!apiKey.length}
                 label="Image search"
               />
