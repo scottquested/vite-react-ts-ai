@@ -86,7 +86,7 @@ const App = () => {
           <Input
             onChange={e => setApiKey(e.target.value)}
             defaultValue={apiKey}
-            placeholder="Please enter your API key first"
+            placeholder="Please enter your API key"
             type={'password'}
             label="API key"
             disabled={import.meta.env.DEV}
@@ -95,7 +95,7 @@ const App = () => {
             <>
               <Input
                 onChange={e => setTextToSearch(e.target.value)}
-                placeholder="What kind of image do you want?"
+                placeholder="Type what image you want to generate"
                 disabled={!apiKey.length}
                 label="Image search"
               />
