@@ -2,9 +2,6 @@
 
 This repository is a demo project that showcases how to use Vite, React, Typescript and OpenAI to generate images. 
 
-## Demo
-You can view the demo [here](https://scottquested.github.io/vite-react-ts-ai/)
-
 ## Installation
 
 To get started with this demo project, you will need to clone the repository and install the dependencies:
